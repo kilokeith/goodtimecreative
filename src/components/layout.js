@@ -34,14 +34,14 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
+
         <footer
           style={{
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          © {new Date().getFullYear()},{' '}
+          <a href="https://goodtimecreative.com">Good Time Creative, LLC</a>
         </footer>
       </div>
     </>
