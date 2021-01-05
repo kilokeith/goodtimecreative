@@ -13,6 +13,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -21,6 +27,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    'gatsby-plugin-catch-links',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
