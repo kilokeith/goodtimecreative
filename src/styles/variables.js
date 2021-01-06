@@ -1,7 +1,7 @@
 const variables = {
   baseFontSize: '16px',
   baseFontFamily: [
-    'Montserrat',
+    'Gotham-Medium',
     'Trebuchet MS',
     'Helvetica',
     'Arial',
