@@ -1,44 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import { theme } from 'styled-tools';
 
-const StyledHeader = styled.header`
-  margin-bottom: 1.45rem;
-
-  > div {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 1.45rem 1.0875rem;
-
-    h1 {
-      margin: 0;
-
-      a {
-        color: ${theme('colors.white')};
-        text-decoration: none;
-      }
-    }
-  }
+const StyledHeader = styled.footer`
+  margin-top: 2rem;
 `;
 
-const Header = ({ siteTitle }) => (
+const Footer = () => (
   <StyledHeader>
-    <div>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </div>
+    © {new Date().getFullYear()},{' '}
+    <a href="https://goodtimecreative.com">Good Time Creative, LLC</a>
   </StyledHeader>
 );
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
+Footer.propTypes = {};
 
-Header.defaultProps = {
-  siteTitle: ``,
-};
+Footer.defaultProps = {};
 
-export default Header;
+export default Footer;
