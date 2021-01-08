@@ -7,11 +7,11 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
-
 import Header from './header';
-
+import Footer from './footer';
 import theme from '../styles/theme';
 // include global css with normalize.css reset
 import { GlobalStyle } from '../styles/global.css.js';
@@ -30,24 +30,19 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-
-        <footer
+      <div id="outer-container">
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <div
           style={{
-            marginTop: `2rem`,
+            margin: `0 auto`,
+            maxWidth: 960,
+            padding: `0 1.0875rem 1.45rem`,
           }}
         >
-          © {new Date().getFullYear()},{' '}
-          <a href="https://goodtimecreative.com">Good Time Creative, LLC</a>
-        </footer>
+          <main>{children}</main>
+
+          <Footer />
+        </div>
       </div>
     </ThemeProvider>
   );
