@@ -11,6 +11,7 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 import Header from './header';
+import Container from './container';
 import Footer from './footer';
 import theme from '../styles/theme';
 // include global css with normalize.css reset
@@ -32,17 +33,11 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <div id="outer-container">
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
-          }}
-        >
+        <Container>
           <main>{children}</main>
 
           <Footer />
-        </div>
+        </Container>
       </div>
     </ThemeProvider>
   );

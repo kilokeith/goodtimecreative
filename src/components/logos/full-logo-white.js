@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const SVGComponent = props => (
+const FullLogoWhite = props => (
   <svg
     style={{
       fillRule: 'evenodd',
@@ -71,6 +71,6 @@ const SVGComponent = props => (
       </g>
     </g>
   </svg>
-)
+);
 
-export default SVGComponent
+export default FullLogoWhite;
