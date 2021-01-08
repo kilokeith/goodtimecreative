@@ -8,7 +8,11 @@ import SEO from '../components/seo';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <img src={Logo} style={{ width: '100%', color: '#000' }} />
+    <img
+      src={Logo}
+      style={{ width: '100%', color: '#000' }}
+      alt="Good Time Creative"
+    />
   </Layout>
 );
 
