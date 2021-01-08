@@ -2,13 +2,13 @@ import React from 'react';
 // import { Link } from 'gatsby'
 
 import Layout from '../components/layout';
-import Logo from '../components/full-logo-white';
+import Logo from '../images/logos/logo-full-large.jpg';
 import SEO from '../components/seo';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Logo style={{ width: '100%', color: '#fff' }} />
+    <img src={Logo} style={{ width: '100%', color: '#000' }} />
   </Layout>
 );
 
