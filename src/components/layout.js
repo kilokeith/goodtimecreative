@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
+import { ScreenClassProvider } from 'react-grid-system';
 import Header from './header';
 import Container from './container';
 import Footer from './footer';
@@ -30,15 +31,17 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <div id="outer-container">
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <Container>
-          <main>{children}</main>
+      <ScreenClassProvider>
+        <GlobalStyle />
+        <div id="outer-container">
+          <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+          <Container>
+            <main>{children}</main>
 
-          <Footer />
-        </Container>
-      </div>
+            <Footer />
+          </Container>
+        </div>
+      </ScreenClassProvider>
     </ThemeProvider>
   );
 };
