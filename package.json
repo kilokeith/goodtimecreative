@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "goodtimecreative-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Good Time Creative website build on Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Keith Hoffmann <hi@keith.work>",
   "dependencies": {
     "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.12.0",
@@ -28,11 +28,13 @@
     "react-grid-system": "^7.1.1",
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.19",
+    "styled-breakpoints": "^9.0.9",
     "styled-components": "^5.2.1",
     "styled-tools": "^1.7.2",
     "typography": "^0.16.19"
   },
   "devDependencies": {
+    "http-proxy-middleware": "^1.0.6",
     "prettier": "2.2.1"
   },
   "keywords": [
@@ -50,9 +52,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/kilokeith/goodtimecreative"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/kilokeith/goodtimecreative/issues"
   }
 }
