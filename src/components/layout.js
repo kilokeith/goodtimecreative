@@ -7,7 +7,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 import { ScreenClassProvider } from 'react-grid-system';
