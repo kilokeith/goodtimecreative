@@ -1,9 +1,8 @@
-// https://github.com/jameslnewell/styled-components-breakpoint
-const breakpoints = {
-  xs: 0,
-  sm: 768, // 48em
-  md: 1024, // 64em
-  lg: 1200, // 75em
-};
+import { map } from 'rambdax';
+import { sizes } from './flexbox';
+
+// https://github.com/mg901/styled-breakpoints
+// transform into px values (e.q. 64 -> '64px')
+const breakpoints = map(val => `${val}px`, sizes);
 
 export default breakpoints;

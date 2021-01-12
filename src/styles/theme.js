@@ -9,7 +9,7 @@ const theme = {
   variables,
   breakpoints,
   typography,
-  flexboxgrid: flexbox,
+  flexbox,
 };
 
 export default theme;

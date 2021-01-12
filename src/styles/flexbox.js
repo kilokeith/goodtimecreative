@@ -1,21 +1,20 @@
-// https://github.com/loicmahieu/react-styled-flexboxgrid
+import { zipObj } from 'rambdax';
+import { setConfiguration } from 'react-grid-system';
+// https://github.com/sealninja/react-grid-system
+
+export const breakpoints = [576, 768, 992, 1200, 1600];
+export const screenClasses = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'];
+export const sizes = zipObj(screenClasses, [0, ...breakpoints]);
+
 const flexbox = {
-  // Defaults
-  gridSize: 12, // columns
-  gutterWidth: 1, // rem
-  outerMargin: 2, // rem
-  mediaQuery: 'only screen',
-  container: {
-    sm: 46, // rem
-    md: 61, // rem
-    lg: 76, // rem
-  },
-  breakpoints: {
-    xs: 0, // em
-    sm: 48, // em
-    md: 64, // em
-    lg: 75, // em
-  },
+  breakpoints: breakpoints,
+  containerWidths: [540, 740, 960, 1140, 1540],
+  gutterWidth: 30,
+  gridColumns: 12,
+  defaultScreenClass: 'xxl',
+  maxScreenClass: 'xxl',
 };
+
+setConfiguration(flexbox);
 
 export default flexbox;
