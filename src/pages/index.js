@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // import { Link } from 'gatsby'
 import { theme } from 'styled-tools';
 
-import Layout from '../components/layout';
+import Layout from '../components/ui/layout';
 import Logo from '../images/logos/logo-full-large.jpg';
 import SEO from '../components/seo';
 

@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/ui/layout';
+import SEO from '../components/seo';
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About GTC" />
   </Layout>
-)
+);
 
-export default AboutPage
+export default AboutPage;
