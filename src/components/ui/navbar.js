@@ -39,13 +39,28 @@ const Navbar = ({ fixed = true }) => {
   return (
     <StyledNav role="navigation" aria-label="main-navigation" fixed={fixed}>
       <Hidden xs sm>
-        <Row>
-          <Col>
+        <Row align="center" justify="start">
+          <Col md={2}>
             <Link to="/">
               <Logo />
             </Link>
           </Col>
-          <Col></Col>
+          <Col md={10}>
+            <Row align="center" justify="end">
+              <Col md={2} lg={1}>
+                <MenuLink to="/">Home</MenuLink>
+              </Col>
+              <Col md={2} lg={1}>
+                <MenuLink to="/work">Work</MenuLink>
+              </Col>
+              <Col md={2} lg={1}>
+                <MenuLink to="/about">About</MenuLink>
+              </Col>
+              <Col md={3} lg={2}>
+                <MenuLink to="/contact">Work with us</MenuLink>
+              </Col>
+            </Row>
+          </Col>
         </Row>
       </Hidden>
 
