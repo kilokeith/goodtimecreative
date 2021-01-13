@@ -35,15 +35,16 @@ const Layout = ({ children }) => {
       <ScreenClassProvider>
         <GlobalStyle />
         <div id="page-outter-wrapper">
-          <FullWidthSection>
+          <Container fluid>
             <Header siteTitle={data.site.siteMetadata?.title || `GTC Home`} />
-          </FullWidthSection>
+          </Container>
           <Container>
             <main>{children}</main>
+
+            <FullWidthSection>
+              <Footer />
+            </FullWidthSection>
           </Container>
-          <FullWidthSection>
-            <Footer />
-          </FullWidthSection>
         </div>
       </ScreenClassProvider>
     </ThemeProvider>
