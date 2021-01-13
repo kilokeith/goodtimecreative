@@ -1,21 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 // import { Link } from 'gatsby'
-import { theme } from 'styled-tools';
+// import { theme } from 'styled-tools';
+// import { Row, Col } from 'react-grid-system';
 
 import Layout from '../components/ui/layout';
-import Logo from '../images/logos/logo-full-large.jpg';
+import HeroSection from '../components/home/hero-section';
 import SEO from '../components/seo';
-
-const StyledLogo = styled.img`
-  width: 100%;
-  color: ${theme('colors.black')};
-`;
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <StyledLogo src={Logo} alt="Good Time Creative" />
+
+    <HeroSection />
   </Layout>
 );
 
