@@ -4,7 +4,9 @@ import styled from 'styled-components';
 
 const StyledSection = styled.section``;
 
-const Section = ({ children }) => <StyledSection>{children}</StyledSection>;
+const Section = ({ children, ...props }) => (
+  <StyledSection {...props}>{children}</StyledSection>
+);
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,
