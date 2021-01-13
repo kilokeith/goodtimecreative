@@ -65,8 +65,9 @@ const Navbar = ({ fixed = true }) => {
       </Hidden>
 
       <Visible xs sm>
-        {/* BURGER */}
-        <Row></Row>
+        <Row align="center" justify="end">
+          <Col>{/* BURGER */}</Col>
+        </Row>
       </Visible>
     </StyledNav>
   );
