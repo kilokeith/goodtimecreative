@@ -11,12 +11,13 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 import { ScreenClassProvider } from 'react-grid-system';
-import Header from './header';
+import Header from '../header';
 import Container from './container';
-import Footer from './footer';
-import theme from '../styles/theme';
+import Footer from '../footer';
+import FullWidthSection from './full-wdth-section';
+import theme from '../../styles/theme';
 // include global css with normalize.css reset
-import { GlobalStyle } from '../styles/global.css.js';
+import { GlobalStyle } from '../../styles/global.css.js';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -33,13 +34,16 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <ScreenClassProvider>
         <GlobalStyle />
-        <div id="outer-container">
-          <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <div id="page-outter-wrapper">
+          <FullWidthSection>
+            <Header siteTitle={data.site.siteMetadata?.title || `GTC Home`} />
+          </FullWidthSection>
           <Container>
             <main>{children}</main>
-
-            <Footer />
           </Container>
+          <FullWidthSection>
+            <Footer />
+          </FullWidthSection>
         </div>
       </ScreenClassProvider>
     </ThemeProvider>
