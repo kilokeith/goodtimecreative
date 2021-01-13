@@ -1,8 +1,6 @@
 /**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
+ * Layout component that uses the react-grid-system Container
+ * See: https://sealninja.github.io/react-grid-system/
  */
 
 import React from 'react';
@@ -12,8 +10,8 @@ import { Container as GridContainer } from 'react-grid-system';
 
 const StyledContainer = styled(GridContainer)``;
 
-const Container = ({ children }) => {
-  return <StyledContainer>{children}</StyledContainer>;
+const Container = ({ children, ...props }) => {
+  return <StyledContainer {...props}>{children}</StyledContainer>;
 };
 
 Container.propTypes = {
