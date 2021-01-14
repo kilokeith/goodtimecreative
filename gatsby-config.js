@@ -10,6 +10,7 @@ module.exports = {
     description: `Good Time Creative is a design and trade show agency from CEO Marissa Hohner.`,
     keywords: ``,
     author: `@kilokeith`,
+    siteUrl: process.env.SITE_URL,
     social: {
       linkedIn: 'https://www.linkedin.com/company/goodtimecreative',
       twitter: 'https://twitter.com/goodtimecreative',

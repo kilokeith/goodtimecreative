@@ -7,13 +7,14 @@ export const useSiteMetadata = () => {
           siteMetadata {
             title
             siteUrl
-            headline
             description
-            image
-            video
-            twitter
-            name
-            logo
+            keywords
+            author
+            social {
+              linkedIn
+              twitter
+              angelList
+            }
           }
         }
       }
