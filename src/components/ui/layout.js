@@ -40,11 +40,12 @@ const Layout = ({ children }) => {
           </Container>
           <Container>
             <main>{children}</main>
-
-            <FullWidthSection>
-              <Footer />
-            </FullWidthSection>
           </Container>
+          <FullWidthSection style={{ backgroundColor: 'black' }}>
+            <Container>
+              <Footer />
+            </Container>
+          </FullWidthSection>
         </div>
       </ScreenClassProvider>
     </ThemeProvider>
