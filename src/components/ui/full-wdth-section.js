@@ -7,8 +7,8 @@ const StyledSection = styled(Section)`
   width: 100%;
 `;
 
-const FullWidthSection = ({ children }) => (
-  <StyledSection>{children}</StyledSection>
+const FullWidthSection = ({ children, ...props }) => (
+  <StyledSection {...props}>{children}</StyledSection>
 );
 
 FullWidthSection.propTypes = {
