@@ -18,6 +18,20 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@src': 'src',
+          '@components': 'src/components',
+          '@images': 'src/images',
+          '@pages': 'src/pages',
+          '@hooks': 'src/hooks',
+          '@styles': 'src/styles',
+        },
+        extensions: ['js'],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-styled-components`,
