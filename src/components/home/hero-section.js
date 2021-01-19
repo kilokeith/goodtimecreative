@@ -13,8 +13,8 @@ const HeroSection = () => {
     query {
       bgImage: file(relativePath: { eq: "backgrounds/welder.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 90, maxWidth: 1428) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -24,13 +24,13 @@ const HeroSection = () => {
   const imageData = data.bgImage.childImageSharp.fluid;
 
   return (
-    <BackgroundImage Tag={StyledSection} fluid={imageData}>
+    <StyledSection Tag={'section'} fluid={imageData}>
       <Row align="center" justify="center" nogutter nowrap>
         <CenteredCol xs={6} md={3}>
           <StyledLogo />
         </CenteredCol>
       </Row>
-    </BackgroundImage>
+    </StyledSection>
   );
 };
 
@@ -44,7 +44,7 @@ const CenteredCol = styled(Col)`
   text-align: center;
 `;
 
-const StyledSection = styled(Section)`
+const StyledSection = styled(BackgroundImage)`
   background-color: ${theme('colors.red')};
   width: 100%;
   padding: 2rem;
