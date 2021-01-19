@@ -53,13 +53,13 @@ const MenuLink = styled(Link)`
   font-weight: 500;
   text-transform: uppercase;
   transition: color 0.3s;
-  color: ${theme('colors.red')};
+  color: ${theme('colors.black')};
 
   &.active {
-    color: ${theme('colors.black')};
+    color: ${theme('colors.red')};
   }
   &:hover {
-    color: ${theme('colors.black')};
+    color: ${theme('colors.red')};
   }
 `;
 
