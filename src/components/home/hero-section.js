@@ -2,19 +2,37 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
 import { Row, Col } from 'react-grid-system';
+import { graphql, useStaticQuery } from 'gatsby';
 
+import BackgroundImage from 'gatsby-background-image';
 import Logo from '../logos/logo-round-face';
 import Section from '../ui/section';
 
-const HeroSection = () => (
-  <StyledSection>
-    <Row align="center" justify="center" nogutter nowrap>
-      <CenteredCol xs={6} md={3}>
-        <StyledLogo />
-      </CenteredCol>
-    </Row>
-  </StyledSection>
-);
+const HeroSection = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      bgImage: file(relativePath: { eq: "backgrounds/welder.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 900) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
+  const imageData = data.bgImage.childImageSharp.fluid;
+
+  return (
+    <BackgroundImage Tag={StyledSection} fluid={imageData}>
+      <Row align="center" justify="center" nogutter nowrap>
+        <CenteredCol xs={6} md={3}>
+          <StyledLogo />
+        </CenteredCol>
+      </Row>
+    </BackgroundImage>
+  );
+};
 
 /* STYLED Elements */
 const StyledLogo = styled(Logo)`
