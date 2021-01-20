@@ -21,16 +21,24 @@ const Navbar = ({ fixed = true }) => {
               <Col md={8} lg={8}>
                 <MenuItems>
                   <li>
-                    <MenuLink to="/">Home</MenuLink>
+                    <MenuLink to="/" activeClassName="active">
+                      Home
+                    </MenuLink>
                   </li>
                   <li>
-                    <MenuLink to="/work">Work</MenuLink>
+                    <MenuLink to="/work" activeClassName="active">
+                      Work
+                    </MenuLink>
                   </li>
                   <li>
-                    <MenuLink to="/about">About</MenuLink>
+                    <MenuLink to="/about" activeClassName="active">
+                      About
+                    </MenuLink>
                   </li>
                   <li>
-                    <MenuLink to="/contact">Work with us</MenuLink>
+                    <MenuLink to="/contact" activeClassName="active">
+                      Work with us
+                    </MenuLink>
                   </li>
                 </MenuItems>
               </Col>
@@ -55,9 +63,7 @@ const MenuLink = styled(Link)`
   transition: color 0.3s;
   color: ${theme('colors.black')};
 
-  &.active {
-    color: ${theme('colors.red')};
-  }
+  &.active,
   &:hover {
     color: ${theme('colors.red')};
   }
@@ -83,12 +89,6 @@ const StyledNav = styled.nav`
   left: 0;
   width: 100%;
   z-index: 999;
-
-  ${MenuLink} {
-    &.active {
-      color: ${theme('colors.black')};
-    }
-  }
 `;
 
 const Logo = styled(TextLogo)`
