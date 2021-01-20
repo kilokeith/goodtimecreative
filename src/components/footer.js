@@ -3,19 +3,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
-const StyledFooter = styled.footer`
-  margin-top: 2rem;
-  padding: 4rem 2rem 2rem 2rem;
-  background-color: ${theme('colors.black')};
-  color: ${theme('colors.white')};
-`;
-
 const Footer = () => (
   <StyledFooter>
     © {new Date().getFullYear()},{' '}
     <a href="https://goodtimecreative.com">Good Time Creative, LLC</a>
   </StyledFooter>
 );
+
+const StyledFooter = styled.footer`
+  padding: 8rem 2rem 2rem 2rem;
+  color: ${theme('colors.white')};
+`;
 
 Footer.propTypes = {};
 
