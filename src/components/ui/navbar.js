@@ -10,7 +10,7 @@ const Navbar = ({ fixed = true }) => {
   return (
     <StyledNav role="navigation" aria-label="main-navigation" fixed={fixed}>
       <Hidden xs sm>
-        <Row align="center" justify="start">
+        <Row justify="start">
           <Col md={2}>
             <Link to="/">
               <Logo />
@@ -57,7 +57,7 @@ const Navbar = ({ fixed = true }) => {
 };
 
 const MenuLink = styled(Link)`
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
   transition: color 0.3s;
