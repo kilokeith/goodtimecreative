@@ -7,17 +7,16 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-// import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 import { ScreenClassProvider } from 'react-grid-system';
 import Header from '../header';
 import Container from './container';
 import Footer from '../footer';
-import FullWidthSection from './full-wdth-section';
-import theme from '../../styles/theme';
+import FooterWrapper from '../footer-wrapper';
+import theme from '@styles/theme';
 // include global css with normalize.css reset
-import { GlobalStyle } from '../../styles/global.css.js';
-import { useSiteMetadata } from '../../hooks/use-site-metadata';
+import { GlobalStyle } from '@styles/global.css.js';
+import { useSiteMetadata } from '@hooks/use-site-metadata';
 
 const Layout = ({ children }) => {
   const siteMetadata = useSiteMetadata();
@@ -28,19 +27,17 @@ const Layout = ({ children }) => {
         <GlobalStyle />
 
         <div id="page-outter-wrapper">
-          <Container fluid>
+          <Container fluid className="pink-grit-bg">
             <Header siteTitle={siteMetadata?.title || `GTC Home`} />
           </Container>
 
-          <Container>
-            <main>{children}</main>
-          </Container>
+          <main>{children}</main>
 
-          <FullWidthSection style={{ backgroundColor: 'black' }}>
+          <FooterWrapper>
             <Container>
               <Footer />
             </Container>
-          </FullWidthSection>
+          </FooterWrapper>
         </div>
       </ScreenClassProvider>
     </ThemeProvider>
