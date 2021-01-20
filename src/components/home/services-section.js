@@ -2,20 +2,29 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
 import { Row, Col } from 'react-grid-system';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import BackgroundImage from 'gatsby-background-image';
 import Logo from '../logos/logo-round-face';
 import Section from '../ui/section';
-import { useBackground } from '@hooks/use-background';
 
-const HeroSection = () => {
-  const background = useBackground('welder.jpg');
+const ServicesSection = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      bgImage: file(relativePath: { eq: "backgrounds/welder.jpg" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 1428) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
+  const imageData = data.bgImage.childImageSharp.fluid;
 
   return (
-    <StyledSection
-      Tag={'section'}
-      fluid={background.node.childImageSharp.fluid}
-    >
+    <StyledSection Tag={'section'} fluid={imageData}>
       <Row align="center" justify="center" nogutter nowrap>
         <CenteredCol xs={6} md={3}>
           <StyledLogo />
@@ -41,4 +50,4 @@ const StyledSection = styled(BackgroundImage)`
   padding: 2rem;
 `;
 
-export default HeroSection;
+export default ServicesSection;

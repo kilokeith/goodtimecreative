@@ -1,18 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
-// import { Link } from 'gatsby'
-// import { theme } from 'styled-tools';
-// import { Row, Col } from 'react-grid-system';
-
 import Layout from '../components/ui/layout';
-import HeroSection from '../components/home/hero-section';
 import SEO from '../components/seo';
+
+import HeroSection from '../components/home/hero-section';
+import AboutSection from '../components/home/about-section';
+import ServicesSection from '../components/home/services-section';
+import TeamSection from '../components/home/team-section';
+// import WorkSection from '../components/home/work-section';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
     <HeroSection />
+    <AboutSection />
+    <ServicesSection />
+    <TeamSection />
   </Layout>
 );
 
