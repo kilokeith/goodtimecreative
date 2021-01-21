@@ -32,6 +32,16 @@ module.exports = {
         extensions: ['js'],
       },
     },
+    {
+      resolve: 'gatsby-plugin-svgr',
+      options: {
+        prettier: true,
+        svgo: true,
+        svgoConfig: {
+          plugins: [{ removeViewBox: true }, { cleanupIDs: true }],
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-styled-components`,
