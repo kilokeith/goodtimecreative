@@ -31,7 +31,9 @@ const Layout = ({ children }) => {
             <Header siteTitle={siteMetadata?.title || `GTC Home`} />
           </Container>
 
-          <main>{children}</main>
+          <main id="layout-main" role="main">
+            {children}
+          </main>
 
           <FooterWrapper>
             <Container>
