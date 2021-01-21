@@ -13,10 +13,10 @@ export const useBackground = filename => {
           node {
             base
             childImageSharp {
-              fluid(quality: 90, maxWidth: 1428) {
+              fluid(quality: 90, maxWidth: 1024) {
                 ...GatsbyImageSharpFluid_withWebp
               }
-              fixed(width: 1428) {
+              fixed(width: 1024) {
                 ...GatsbyImageSharpFixed
               }
             }
