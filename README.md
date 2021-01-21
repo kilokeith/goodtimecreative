@@ -8,6 +8,24 @@
   Gatsby's default starter
 </h1>
 
+## Package Docs
+
+The packages used in this site include:
+
+- [typography.js](https://kyleamathews.github.io/typography.js/)
+- [typography.js gatsby plugin](https://www.gatsbyjs.com/docs/using-typography-js/#typographyjs)
+- [gatsby-plugin-svgr](https://github.com/zabute/gatsby-plugin-svgr) - for svgs as components
+- [styled-components](https://styled-components.com/docs)
+- [polished](https://github.com/styled-components/polished) - style and color utils for styled-components
+- [styled-tools](https://github.com/diegohaz/styled-tools) - helpers for styled-components
+- [react-burger-menu](https://github.com/negomi/react-burger-menu)
+- [styled-breakpoints](https://github.com/mg901/styled-breakpoints) - breakpoints in styled-components
+- [react-grid-system - flexbox grid](https://sealninja.github.io/react-grid-system/)
+- [rambdax](https://github.com/selfrefactor/rambdax) - extended ramda lib
+- [gatsby-background-image](https://github.com/timhagn/gatsby-background-image/tree/main/packages/gatsby-background-image#readme)
+
+---
+
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
