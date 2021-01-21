@@ -4,6 +4,7 @@ import { Row, Col, Visible, Hidden } from 'react-grid-system';
 import { up, between } from 'styled-breakpoints';
 import { theme, ifProp } from 'styled-tools';
 import { Link } from 'gatsby';
+import NavbarMobile from './navbar-mobile';
 import TextLogo from '../logos/text-logo';
 
 const Navbar = ({ fixed = true }) => {
@@ -48,8 +49,10 @@ const Navbar = ({ fixed = true }) => {
       </Hidden>
 
       <Visible xs sm>
-        <Row align="center" justify="end">
-          <Col>{/* BURGER */}</Col>
+        <Row align="center" justify="end" nogutter>
+          <Col>
+            <NavbarMobile />
+          </Col>
         </Row>
       </Visible>
     </StyledNav>

@@ -1,11 +1,11 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import NavBar from './ui/navbar';
+import Navbar from './ui/navbar';
 
 const Header = () => (
   <StyledHeader>
-    <NavBar fixed={false} />
+    <Navbar fixed={false} />
   </StyledHeader>
 );
 
