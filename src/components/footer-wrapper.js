@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
-import Image from 'gatsby-image';
 import FullWidthSection from './ui/full-wdth-section';
 import FooterSmileImage from '@images/logos/gtc-footer-smile.png';
 

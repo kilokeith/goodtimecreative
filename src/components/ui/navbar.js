@@ -1,7 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Row, Col, Visible, Hidden } from 'react-grid-system';
-import { up, between } from 'styled-breakpoints';
 import { theme, ifProp } from 'styled-tools';
 import { Link } from 'gatsby';
 import NavbarMobile from './navbar-mobile';

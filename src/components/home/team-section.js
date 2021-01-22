@@ -6,7 +6,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import BackgroundImage from 'gatsby-background-image';
 import Logo from '../logos/logo-round-face';
-import Section from '../ui/section';
 
 const TeamSection = () => {
   const data = useStaticQuery(graphql`

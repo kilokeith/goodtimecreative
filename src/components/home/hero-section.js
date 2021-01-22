@@ -5,7 +5,6 @@ import { Row, Col } from 'react-grid-system';
 
 import BackgroundImage from 'gatsby-background-image';
 import Logo from '../logos/logo-round-face';
-import Section from '../ui/section';
 import { useBackground } from '@hooks/use-background';
 
 const HeroSection = () => {
