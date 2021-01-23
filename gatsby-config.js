@@ -19,8 +19,8 @@ module.exports = {
       instagram: 'https://www.instagram.com/goodtimecreativeco/',
       facebook: 'https://www.facebook.com/GoodTimeCreativeCo/',
       twitter: 'https://twitter.com/goodtmcreative',
-      linkedIn: 'https://www.linkedin.com/company/goodtimecreative',
-      angelList: 'https://angel.co/goodtimecreative',
+      linkedIn: 'https://www.linkedin.com/company/good-time-creative',
+      pinterest: 'https://www.pinterest.com/goodtimecreative_co/',
     },
   },
   plugins: [
