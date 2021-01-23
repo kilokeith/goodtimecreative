@@ -17,7 +17,7 @@ export const useSiteMetadata = () => {
               facebook
               twitter
               linkedIn
-              angelList
+              pinterest
             }
           }
         }
