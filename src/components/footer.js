@@ -5,10 +5,11 @@ import styled from 'styled-components';
 import { theme } from 'styled-tools';
 import { Row, Col } from 'react-grid-system';
 import Headline from './ui/headline';
+import SocialLink from './ui/social-links';
 import { useSiteMetadata } from '@hooks/use-site-metadata';
 
 const Footer = () => {
-  const { contactEmail, contactAddress } = useSiteMetadata();
+  const { contactEmail, contactAddress, social } = useSiteMetadata();
 
   return (
     <StyledFooter>
@@ -17,7 +18,21 @@ const Footer = () => {
           <Headline size="h1" color={'white'}>
             Let's Work Together
           </Headline>
+
           <p>{contactAddress}</p>
+
+          <SocialsRow>
+            <li>
+              <SocialLink platform="instagram" size={32} />
+            </li>
+            <li>
+              <SocialLink platform="facebook" size={32} />
+            </li>
+            <li>
+              <SocialLink platform="twitter" size={32} />
+            </li>
+          </SocialsRow>
+
           <p>
             <Obfuscate
               email={contactEmail}
@@ -40,6 +55,27 @@ const StyledFooter = styled.footer`
   p {
     white-space: pre-line;
     line-height: 0.75em;
+  }
+`;
+
+const SocialsRow = styled.ul`
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 1rem;
+    &::last-of-type {
+      margin-right: 0;
+    }
+
+    ${SocialLink} {
+      &:hover {
+        color: ${theme('colors.white')};
+      }
+    }
   }
 `;
 
