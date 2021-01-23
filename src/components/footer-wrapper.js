@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
+import { Hidden } from 'react-grid-system';
 import FullWidthSection from './ui/full-wdth-section';
 import FooterSmileImage from '@images/logos/gtc-footer-smile.png';
 
 const FooterWrapper = ({ children, ...props }) => {
   return (
     <StyledWrapper {...props}>
-      <FooterSmile src={FooterSmileImage} />
+      <Hidden xs sm>
+        <FooterSmile src={FooterSmileImage} />
+      </Hidden>
       {children}
     </StyledWrapper>
   );
