@@ -10,6 +10,8 @@ export const useSiteMetadata = () => {
             description
             keywords
             author
+            contactEmail
+            contactAddress
             social {
               linkedIn
               twitter

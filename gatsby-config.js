@@ -11,6 +11,10 @@ module.exports = {
     keywords: ``,
     author: `@kilokeith`,
     siteUrl: process.env.SITE_URL,
+    contactEmail: 'info@goodtimecreative.com',
+    contactAddress: `67 E Madison St. STE 1603A 1041\n
+      Chicago, IL 60603
+    `,
     social: {
       linkedIn: 'https://www.linkedin.com/company/goodtimecreative',
       twitter: 'https://twitter.com/goodtimecreative',
