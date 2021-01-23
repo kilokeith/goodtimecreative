@@ -5,12 +5,11 @@ import { Row, Col } from 'react-grid-system';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import BackgroundImage from 'gatsby-background-image';
-import Logo from '../logos/logo-round-face';
 
 const WorkSection = () => {
   const data = useStaticQuery(graphql`
     query {
-      bgImage: file(relativePath: { eq: "backgrounds/welder.jpg" }) {
+      bgImage: file(relativePath: { eq: "backgrounds/confetti.jpg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1428) {
             ...GatsbyImageSharpFluid_withWebp
@@ -22,30 +21,14 @@ const WorkSection = () => {
 
   const imageData = data.bgImage.childImageSharp.fluid;
 
-  return (
-    <StyledSection Tag={'section'} fluid={imageData}>
-      <Row align="center" justify="center" nogutter nowrap>
-        <CenteredCol xs={6} md={3}>
-          <StyledLogo />
-        </CenteredCol>
-      </Row>
-    </StyledSection>
-  );
+  return <StyledSection Tag={'section'} fluid={imageData}></StyledSection>;
 };
 
 /* STYLED Elements */
-const StyledLogo = styled(Logo)`
-  width: 100%;
-  color: ${theme('colors.white')};
-`;
-
-const CenteredCol = styled(Col)`
-  text-align: center;
-`;
-
 const StyledSection = styled(BackgroundImage)`
   background-color: ${theme('colors.red')};
   width: 100%;
+  height: 40rem;
   padding: 2rem;
 `;
 
