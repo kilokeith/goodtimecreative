@@ -16,9 +16,11 @@ module.exports = {
       Chicago, IL 60603
     `,
     social: {
+      instagram: 'https://www.instagram.com/goodtimecreativeco/',
+      facebook: 'https://www.facebook.com/GoodTimeCreativeCo/',
+      twitter: 'https://twitter.com/goodtmcreative',
       linkedIn: 'https://www.linkedin.com/company/goodtimecreative',
-      twitter: 'https://twitter.com/goodtimecreative',
-      angelList: 'https://angel.co/fgoodtimecreative',
+      angelList: 'https://angel.co/goodtimecreative',
     },
   },
   plugins: [

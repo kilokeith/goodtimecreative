@@ -13,8 +13,10 @@ export const useSiteMetadata = () => {
             contactEmail
             contactAddress
             social {
-              linkedIn
+              instagram
+              facebook
               twitter
+              linkedIn
               angelList
             }
           }
