@@ -31,6 +31,12 @@ const Footer = () => {
             <li>
               <SocialLink platform="twitter" size={32} />
             </li>
+            <li>
+              <SocialLink platform="linkedin" size={32} />
+            </li>
+            <li>
+              <SocialLink platform="pinterest" size={32} />
+            </li>
           </SocialsRow>
 
           <p>
