@@ -6,6 +6,7 @@ import { Row, Col } from 'react-grid-system';
 import BackgroundImage from 'gatsby-background-image';
 import Logo from '../logos/logo-round-face';
 import { useBackground } from '@hooks/use-background';
+import Container from '../ui/container';
 
 const HeroSection = () => {
   const background = useBackground('welder.jpg');
@@ -15,11 +16,13 @@ const HeroSection = () => {
       Tag={'section'}
       fluid={background.node.childImageSharp.fluid}
     >
-      <Row align="center" justify="center" nogutter nowrap>
-        <CenteredCol xs={6} md={3}>
-          <StyledLogo />
-        </CenteredCol>
-      </Row>
+      <Container>
+        <Row align="center" justify="center" nogutter nowrap>
+          <CenteredCol xs={6} md={3}>
+            <StyledLogo />
+          </CenteredCol>
+        </Row>
+      </Container>
     </StyledSection>
   );
 };
