@@ -85,10 +85,10 @@ const ServicesSection = () => {
 
 /* STYLED Elements */
 const CenteredCol = styled(Col)`
-  text-align: center;
   display: flex;
-  /* align-self: stretch; */
   flex-flow: wrap;
+  justify-content: center;
+  text-align: center;
 
   h3 {
     display: flex;
