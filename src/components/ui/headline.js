@@ -35,9 +35,11 @@ const StyledHTag = styled.h1`
   ${switchProp('size', {
     h1: css`
       font-size: 4rem;
+      font-weight: bold;
     `,
     h2: css`
       font-size: 3rem;
+      font-weight: bold;
     `,
     h3: css`
       font-size: 2rem;
