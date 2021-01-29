@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { switchProp, ifProp } from 'styled-tools';
+import { switchProp, ifProp, prop } from 'styled-tools';
 import { colorStyle } from '@styles/mixins/colors';
 
 const Headline = ({ children, size, color, ...props }) => (
@@ -32,7 +32,7 @@ const StyledHTag = styled.h1`
     `
   )}
 
-  ${switchProp('size', {
+  ${switchProp(prop('as'), {
     h1: css`
       font-size: 4rem;
       font-weight: bold;
