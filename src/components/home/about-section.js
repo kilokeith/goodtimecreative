@@ -1,45 +1,51 @@
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from 'styled-tools';
 import { Row, Col } from 'react-grid-system';
-import { graphql, useStaticQuery } from 'gatsby';
 
 import BackgroundImage from 'gatsby-background-image';
-import Logo from '../logos/logo-round-face';
+import { useBackground } from '@hooks/use-background';
+import Container from '../ui/container';
+import Headline from '../ui/headline';
 
 const AboutSection = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      bgImage: file(relativePath: { eq: "backgrounds/welder.jpg" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 1428) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `);
-
-  const imageData = data.bgImage.childImageSharp.fluid;
+  const background = useBackground('pink-grit-bg.jpg');
 
   return (
+    <StyledSection
+      Tag={'section'}
+      fluid={background.node.childImageSharp.fluid}
       id="about"
+    >
+      <Container>
+        <Row align="center" justify="center">
+          <CenteredCol xs={6} md={5} lg={5} xl={5}>
+            <Headline size="h1" color="black" center>
+              What We Do
+            </Headline>
+            <p>
+              Good Time Creative is an extension of your brand.
+              <br />
+              We create engaging experiences that tell your brand's story
+              <br />
+              through various creative channels.
+            </p>
+          </CenteredCol>
+        </Row>
+      </Container>
     </StyledSection>
   );
 };
 
 /* STYLED Elements */
-const StyledLogo = styled(Logo)`
-  width: 100%;
-  color: ${theme('colors.white')};
-`;
-
 const CenteredCol = styled(Col)`
   text-align: center;
+
+  h1 {
+    margin: 6rem 0 6rem 0;
+  }
 `;
 
 const StyledSection = styled(BackgroundImage)`
-  background-color: ${theme('colors.red')};
   width: 100%;
   padding: 2rem;
 `;
