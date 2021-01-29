@@ -23,12 +23,7 @@ const AboutSection = () => {
   const imageData = data.bgImage.childImageSharp.fluid;
 
   return (
-    <StyledSection Tag={'section'} fluid={imageData}>
-      <Row align="center" justify="center" nogutter nowrap>
-        <CenteredCol xs={6} md={3}>
-          <StyledLogo />
-        </CenteredCol>
-      </Row>
+      id="about"
     </StyledSection>
   );
 };

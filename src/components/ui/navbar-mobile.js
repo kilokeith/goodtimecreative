@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
-import { Link } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { Row, Col } from 'react-grid-system';
 import { slide as Menu } from 'react-burger-menu';
 import { rem } from 'polished';
@@ -20,33 +20,38 @@ const NavbarMobile = () => {
           width={'100%'}
           height={'100%'}
         >
-          <Link id="home" className="menu-item" activeClassName="active" to="/">
+          <AnchorLink
+            id="home"
+            className="menu-item"
+            activeClassName="active"
+            to="/"
+          >
             Home
-          </Link>
-          <Link
+          </AnchorLink>
+          <AnchorLink
             id="work"
             className="menu-item"
             activeClassName="active"
-            to="/work"
+            to="/#work"
           >
             Work
-          </Link>
-          <Link
+          </AnchorLink>
+          <AnchorLink
             id="about"
             className="menu-item"
             activeClassName="active"
-            to="/about"
+            to="/#about"
           >
             About
-          </Link>
-          <Link
+          </AnchorLink>
+          <AnchorLink
             id="contact"
             className="menu-item"
             activeClassName="active"
-            to="/contact"
+            to="/#footer"
           >
             Contact
-          </Link>
+          </AnchorLink>
         </Menu>
       </Col>
     </StyledRow>

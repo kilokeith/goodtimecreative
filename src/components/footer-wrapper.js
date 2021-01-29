@@ -7,7 +7,7 @@ import FooterSmileImage from '@images/logos/gtc-footer-smile.png';
 
 const FooterWrapper = ({ children, ...props }) => {
   return (
-    <StyledWrapper {...props}>
+    <StyledWrapper id="footer" {...props}>
       <Hidden xs sm>
         <FooterSmile src={FooterSmileImage} />
       </Hidden>

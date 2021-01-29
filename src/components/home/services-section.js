@@ -15,6 +15,7 @@ const ServicesSection = () => {
     <StyledSection
       Tag={'section'}
       fluid={background.node.childImageSharp.fluid}
+      id="services"
     >
       <Container>
         <Headline size="h1" color={'black'} center>

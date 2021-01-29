@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Row, Col, Visible, Hidden } from 'react-grid-system';
 import { theme, ifProp } from 'styled-tools';
-import { Link } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import NavbarMobile from './navbar-mobile';
 import TextLogo from '../logos/text-logo';
 
@@ -12,9 +12,9 @@ const Navbar = ({ fixed = true }) => {
       <Hidden xs sm>
         <Row justify="start">
           <Col md={2}>
-            <Link to="/">
+            <AnchorLink to="/">
               <Logo />
-            </Link>
+            </AnchorLink>
           </Col>
           <Col md={10}>
             <Row align="center" justify="end">
@@ -26,17 +26,17 @@ const Navbar = ({ fixed = true }) => {
                     </MenuLink>
                   </li>
                   <li>
-                    <MenuLink to="/work" activeClassName="active">
+                    <MenuLink to="/#work" activeClassName="active">
                       Work
                     </MenuLink>
                   </li>
                   <li>
-                    <MenuLink to="/about" activeClassName="active">
+                    <MenuLink to="/#about" activeClassName="active">
                       About
                     </MenuLink>
                   </li>
                   <li>
-                    <MenuLink to="/contact" activeClassName="active">
+                    <MenuLink to="/#footer" activeClassName="active">
                       Work with us
                     </MenuLink>
                   </li>
@@ -58,7 +58,7 @@ const Navbar = ({ fixed = true }) => {
   );
 };
 
-const MenuLink = styled(Link)`
+const MenuLink = styled(AnchorLink)`
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;

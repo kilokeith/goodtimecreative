@@ -21,7 +21,7 @@ const WorkSection = () => {
 
   const imageData = data.bgImage.childImageSharp.fluid;
 
-  return <StyledSection Tag={'section'} fluid={imageData}></StyledSection>;
+      id="work"
 };
 
 /* STYLED Elements */
