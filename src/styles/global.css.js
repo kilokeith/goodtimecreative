@@ -1,5 +1,5 @@
 import { css, createGlobalStyle } from 'styled-components';
-import typography from './typography.css';
+import fonts from './fonts.css';
 import colors from './colors';
 import pinkGrit from '../images/backgrounds/pink-grit-bg.jpg';
 import blackGrit from '../images/backgrounds/black-grit-bg.jpg';
@@ -8,11 +8,13 @@ import blackGrit from '../images/backgrounds/black-grit-bg.jpg';
 
 // expand normalize.css string into css
 export const normalize = css`
-  ${typography}
+  ${fonts}
   body {
     max-width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
+    font-size: 16px;
+    color: ${colors.black};
   }
 `;
 // create a global page style
