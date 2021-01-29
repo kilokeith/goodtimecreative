@@ -1,27 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
-import { Row, Col } from 'react-grid-system';
-import { graphql, useStaticQuery } from 'gatsby';
 
 import BackgroundImage from 'gatsby-background-image';
+import { useBackground } from '@hooks/use-background';
 
 const WorkSection = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      bgImage: file(relativePath: { eq: "backgrounds/confetti.jpg" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 1428) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `);
+  const background = useBackground('confetti.jpg');
 
-  const imageData = data.bgImage.childImageSharp.fluid;
-
+  return (
+    <StyledSection
+      Tag={'section'}
+      fluid={background.node.childImageSharp.fluid}
       id="work"
+    ></StyledSection>
+  );
 };
 
 /* STYLED Elements */
