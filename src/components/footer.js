@@ -9,7 +9,7 @@ import SocialLink from './ui/social-links';
 import { useSiteMetadata } from '@hooks/use-site-metadata';
 
 const Footer = () => {
-  const { contactEmail, contactAddress, social } = useSiteMetadata();
+  const { contactEmail, contactAddress, siteUrl } = useSiteMetadata();
 
   return (
     <StyledFooter>
@@ -50,7 +50,7 @@ const Footer = () => {
         </Col>
       </Row>
       © {new Date().getFullYear()},{' '}
-      <a href="https://goodtimecreative.com">Good Time Creative, LLC</a>
+      <a href={siteUrl}>Good Time Creative, LLC</a>
     </StyledFooter>
   );
 };
