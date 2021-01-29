@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Row, Col } from 'react-grid-system';
+import { Row, Col, Hidden } from 'react-grid-system';
 
 import BackgroundImage from 'gatsby-background-image';
 import { useBackground } from '@hooks/use-background';
@@ -18,14 +18,19 @@ const AboutSection = () => {
     >
       <Container>
         <Row align="center" justify="center">
+          <CenteredCol xs={12} md={6}>
             <Headline size="h3" color="black" center>
               What We Do
             </Headline>
             <p>
-              Good Time Creative is an extension of your brand.
-              <br />
-              We create engaging experiences that tell your brand's story
-              <br />
+              Good Time Creative is an extension of your brand.{' '}
+              <Hidden sm md>
+                <br />
+              </Hidden>
+              We create engaging experiences that tell your brand's story{' '}
+              <Hidden xs sm md>
+                <br />
+              </Hidden>
               through various creative channels.
             </p>
           </CenteredCol>
