@@ -15,7 +15,7 @@ const Footer = () => {
     <StyledFooter>
       <Row justify="start">
         <Col xs={12} sm={10} md={6}>
-          <Headline size="h1" color={'white'}>
+          <Headline size="h3" color={'white'}>
             Let's Work Together
           </Headline>
 

@@ -18,7 +18,7 @@ const ServicesSection = () => {
       id="services"
     >
       <Container>
-        <Headline size="h1" color={'black'} center>
+        <Headline size="h3" color={'black'} center>
           Let's Work Together
         </Headline>
         <Row align="start" justify="center">

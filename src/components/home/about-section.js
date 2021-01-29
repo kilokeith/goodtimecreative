@@ -18,8 +18,7 @@ const AboutSection = () => {
     >
       <Container>
         <Row align="center" justify="center">
-          <CenteredCol xs={6} md={5} lg={5} xl={5}>
-            <Headline size="h1" color="black" center>
+            <Headline size="h3" color="black" center>
               What We Do
             </Headline>
             <p>

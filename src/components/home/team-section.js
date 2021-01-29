@@ -22,7 +22,7 @@ const TeamSection = () => {
       <Container>
         <Row align="center" justify="center" nogutter nowrap>
           <CenteredCol xs={12} md={6}>
-            <Headline color="black" center>
+            <Headline size="h3" color="black" center>
               Who We Are
             </Headline>
             <p>
