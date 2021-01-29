@@ -6,10 +6,10 @@ export const useSiteMetadata = () => {
         site {
           siteMetadata {
             title
-            siteUrl
             description
             keywords
             author
+            siteUrl
             contactEmail
             contactAddress
             social {

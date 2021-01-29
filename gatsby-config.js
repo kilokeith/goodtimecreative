@@ -10,7 +10,7 @@ module.exports = {
     description: `Good Time Creative is a design and trade show agency from CEO Marissa Hohner.`,
     keywords: ``,
     author: `@kilokeith`,
-    siteUrl: process.env.SITE_URL,
+    siteUrl: process.env.SITE_URL || 'https://goodtimecreative.com',
     contactEmail: 'info@goodtimecreative.com',
     contactAddress: `67 E Madison St. STE 1603A 1041\n
       Chicago, IL 60603
