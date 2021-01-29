@@ -30,11 +30,11 @@ const teamBios = [
 
 const TeamList = () => {
   return (
-    <Row align="center" justify="center" nogutter nowrap>
+    <Row justify="center">
       {teamBios &&
         teamBios.map(member => {
           return (
-            <Col>
+            <Col xs={12} md={6} lg={4} key={`team-member-profile-${member.id}`}>
               <TeamMember {...member} />
             </Col>
           );
