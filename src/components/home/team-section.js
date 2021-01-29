@@ -11,7 +11,6 @@ import TeamList from './team-list';
 
 const TeamSection = () => {
   const background = useBackground('pink-grit-bg.jpg');
-  console.log('bg', background);
 
   return (
     <StyledSection
@@ -35,8 +34,8 @@ const TeamSection = () => {
           </CenteredCol>
         </Row>
 
-        <Headline color="black" center>
-          Who We Are
+        <Headline size="h3" color="black" center>
+          Our Team
         </Headline>
         <TeamList />
       </Container>
@@ -50,7 +49,6 @@ const CenteredCol = styled(Col)`
 `;
 
 const StyledSection = styled(BackgroundImage)`
-  /* background-color: ${theme('colors.red')}; */
   width: 100vw;
   min-height: 500px;
   padding: 2rem;
