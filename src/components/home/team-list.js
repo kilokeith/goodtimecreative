@@ -10,21 +10,21 @@ const teamBios = [
     name: 'Marissa Hohner',
     title: 'Founder & CEO',
     bio:
-      'Donec commodo faucibus mauris, eu gravida lectus finibus in. Aliquam pulvinar suscipit sapien, a ultricies magna porta sed. Fusce purus lorem, eleifend ut facilisis quis, aliquam eu sapien. Nam pellentesque lectus vel tortor faucibus rhoncus. Donec feugiat vel dolor eu tempor. ',
+      'Marissa has over 10 years’ experience in sales, marketing, and operations management. Marissa found her home when she entered the exhibit and event industry. She lives by her color coded calendar, finds complex excel files to be a thing of beauty, and always has a hot cup of coffee nearby.',
   },
   {
     id: 'grace',
     name: 'Grace Pastore',
     title: 'Creative Director',
     bio:
-      'Donec commodo faucibus mauris, eu gravida lectus finibus in. Aliquam pulvinar suscipit sapien, a ultricies magna porta sed. Fusce purus lorem, eleifend ut facilisis quis, aliquam eu sapien. Nam pellentesque lectus vel tortor faucibus rhoncus. Donec feugiat vel dolor eu tempor. ',
+      'Grace has over 20 years of design, production, and creative development experience. Her eye for detail is impeccable, she has a drive unmatched by others, and her ability to manage fifteen tasks at once without missing a beat is true magic.',
   },
   {
     id: 'brittney',
-    name: 'Brittney DeMilk',
+    name: 'Brittney De Mik',
     title: 'Graphic Designer',
     bio:
-      'Donec commodo faucibus mauris, eu gravida lectus finibus in. Aliquam pulvinar suscipit sapien, a ultricies magna porta sed. Fusce purus lorem, eleifend ut facilisis quis, aliquam eu sapien. Nam pellentesque lectus vel tortor faucibus rhoncus. Donec feugiat vel dolor eu tempor.',
+      'Britt has 10 years’ graphic design experience and she is also a photographer. Britt’s infectious energy is something that keeps the team (and the party) going! She enjoys true crime documentaries, Dunkin’ Donuts coffee, and essential oils. The soundtrack to her life is: anything by Lizzo.',
   },
 ];
 
