@@ -9,6 +9,9 @@ import Container from '../ui/container';
 import Headline from '../ui/headline';
 import TeamList from './team-list';
 
+import { ReactComponent as RepeatLogo } from '@images/logos/good_time_repeat.svg';
+import { ReactComponent as RoundLogo } from '@images/logos/gtc_full_round.svg';
+
 const TeamSection = () => {
   const background = useBackground('pink-grit-bg.jpg');
 
@@ -18,6 +21,12 @@ const TeamSection = () => {
       fluid={background.node.childImageSharp.fluid}
       id="team"
     >
+      <StyledRoundLogo />
+      <StyledRepeatLogo>
+        <RepeatLogo />
+        <RepeatLogo />
+      </StyledRepeatLogo>
+
       <Container>
         <Row align="center" justify="center" nogutter nowrap>
           <CenteredCol xs={12} md={6}>
@@ -49,9 +58,30 @@ const CenteredCol = styled(Col)`
 `;
 
 const StyledSection = styled(BackgroundImage)`
+  position: relative;
   width: 100vw;
   min-height: 500px;
   padding: 2rem;
 `;
 
+const StyledRepeatLogo = styled.div`
+  position: absolute;
+  top: 10%;
+  right: 0;
+  z-index: -1;
+  color: ${theme('colors.pink')};
+  opacity: 0.5;
+  width: 20vw;
+`;
+
+const StyledRoundLogo = styled(RoundLogo)`
+  position: absolute;
+  top: 4%;
+  left: 9%;
+  z-index: -1;
+  color: ${theme('colors.pink')};
+  opacity: 0.3;
+  width: 200px;
+  transform: rotate(-20deg);
+`;
 export default TeamSection;
