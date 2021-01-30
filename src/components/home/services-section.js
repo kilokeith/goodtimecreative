@@ -8,6 +8,73 @@ import Headline from '../ui/headline';
 import BackgroundImage from 'gatsby-background-image';
 import { useBackground } from '@hooks/use-background';
 
+const services = [
+  {
+    title: 'Brand Experience',
+    capabilities: [
+      'Experience Design & Concept Development',
+      'Mobile Experiences',
+      'Pop-Up Installations',
+      'Product Launches & Influencer Events',
+      'Branded Boxes & Packaging',
+      'Influencer Brand Kits & Fulfillment',
+    ],
+  },
+  {
+    title: 'Trade Show Exhibits',
+    capabilities: [
+      'Custom Exhibit Fabrication',
+      'Modular & Fabric Exhibits',
+      'Portable Exhibits',
+      '3D Rendering & Graphic Design',
+      'Signage & Large Format Graphics',
+      'Detailing & Engineering',
+    ],
+  },
+  {
+    title: 'Interior Installations',
+    capabilities: [
+      'Permanent & Semi-Permanent Installations',
+      'Space Planning & 3D Design',
+      'Fabrication & Production',
+      'Retail Point Of Purchase Displays',
+      'Demo & Installation',
+    ],
+  },
+  {
+    title: 'Labor & Logistics',
+    capabilities: [
+      'Installation & Dismantle Labor',
+      'Show Order Management',
+      'Show Site Supervision',
+      'Shipping & Trucking',
+      'Storage',
+    ],
+  },
+  {
+    title: 'Virtual Experiences',
+    capabilities: [
+      'Trade Shows & Consumer Events',
+      'Sales Conferences & Showrooms',
+      'Webinars & E-learning',
+      'Product Launches & Influencer Events',
+      'Hybrid Events (live event paired with a virtual platform)',
+    ],
+  },
+];
+
+const Service = ({ title, capabilities }) => (
+  <CenteredCol xs={6} md={3} lg={2}>
+    <h3>{title}</h3>
+    <ul>
+      {capabilities &&
+        capabilities.map(capability => {
+          return <li>{capability}</li>;
+        })}
+    </ul>
+  </CenteredCol>
+);
+
 const ServicesSection = () => {
   const background = useBackground('pink-grit-bg.jpg');
 
@@ -22,62 +89,10 @@ const ServicesSection = () => {
           Let's Work Together
         </Headline>
         <Row align="start" justify="center">
-          <CenteredCol xs={6} md={2}>
-            <h3>Brand Experience</h3>
-            <ul>
-              <li>Experience Design & Concept Development</li>
-              <li>Mobile Experiences</li>
-              <li>Pop-Up Installations</li>
-              <li>Product Launches</li>
-              <li>Temporary Interior Installations</li>
-            </ul>
-          </CenteredCol>
-          <CenteredCol xs={6} md={2}>
-            <h3>Trade Show Exhibits</h3>
-            <ul>
-              <li>Custom Exhibits</li>
-              <li>Modular & Fabric Exhibits</li>
-              <li>Portable Exhibits</li>
-              <li>Fabrication</li>
-              <li>3D Creative Design</li>
-              <li>Graphic Design</li>
-              <li>Graphic Production</li>
-              <li>Detailing & Engineering</li>
-            </ul>
-          </CenteredCol>
-          <CenteredCol xs={6} md={2}>
-            <h3>Interior Installations</h3>
-            <ul>
-              <li>Space Planning</li>
-              <li>3D Design Renderings</li>
-              <li>Fabrication</li>
-              <li>Signage & Graphics Production</li>
-              <li>Demo & Installation</li>
-            </ul>
-          </CenteredCol>
-          <CenteredCol xs={6} md={2}>
-            <h3>Labor & Logistics Services</h3>
-            <ul>
-              <li>Installation & Dismantle Services</li>
-              <li>Show Order Managment</li>
-              <li>Show Site Supervision</li>
-              <li>Logistics</li>
-              <li>Storage</li>
-            </ul>
-          </CenteredCol>
-          <CenteredCol xs={6} md={2}>
-            <h3>Virtual Event Experiences</h3>
-
-            <ul>
-              <li>Virtual Trade Shows & Experiences</li>
-              <li>Sales Meetings & Conferences</li>
-              <li>Webinars & E-learning</li>
-              <li>Product Launches</li>
-              <li>
-                Hybrid Events (live streaming paired with a virtual platform)
-              </li>
-            </ul>
-          </CenteredCol>
+          {services &&
+            services.map(({ title, capabilities }) => (
+              <Service title={title} capabilities={capabilities} />
+            ))}
         </Row>
       </Container>
     </StyledSection>
@@ -92,6 +107,7 @@ const CenteredCol = styled(Col)`
   text-align: center;
 
   h3 {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
