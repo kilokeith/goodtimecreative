@@ -20,43 +20,47 @@ const NavbarMobile = () => {
           width={'100%'}
           height={'100%'}
         >
-          <AnchorLink
+          <MenuLink
             id="home"
             className="menu-item"
             activeClassName="active"
             to="/"
           >
             Home
-          </AnchorLink>
-          <AnchorLink
+          </MenuLink>
+          <MenuLink
             id="work"
             className="menu-item"
             activeClassName="active"
             to="/#work"
           >
             Work
-          </AnchorLink>
-          <AnchorLink
+          </MenuLink>
+          <MenuLink
             id="about"
             className="menu-item"
             activeClassName="active"
             to="/#about"
           >
             About
-          </AnchorLink>
-          <AnchorLink
+          </MenuLink>
+          <MenuLink
             id="contact"
             className="menu-item"
             activeClassName="active"
             to="/#footer"
           >
             Contact
-          </AnchorLink>
+          </MenuLink>
         </Menu>
       </Col>
     </StyledRow>
   );
 };
+
+const MenuLink = styled(AnchorLink)`
+  display: block;
+`;
 
 const StyledRow = styled(Row)`
   button {
