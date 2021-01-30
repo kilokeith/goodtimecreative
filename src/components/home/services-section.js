@@ -64,12 +64,12 @@ const services = [
 ];
 
 const Service = ({ title, capabilities }) => (
-  <CenteredCol xs={6} md={3} lg={2}>
+  <CenteredCol xs={6} md={3} lg={2} key={`service-list-${title}`}>
     <h3>{title}</h3>
     <ul>
       {capabilities &&
         capabilities.map(capability => {
-          return <li>{capability}</li>;
+          return <li key={`capabilities-list-${capability}`}>{capability}</li>;
         })}
     </ul>
   </CenteredCol>
@@ -91,7 +91,11 @@ const ServicesSection = () => {
         <Row align="start" justify="center">
           {services &&
             services.map(({ title, capabilities }) => (
-              <Service title={title} capabilities={capabilities} />
+              <Service
+                title={title}
+                capabilities={capabilities}
+                key={`services-${title}`}
+              />
             ))}
         </Row>
       </Container>
