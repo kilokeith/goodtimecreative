@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { theme } from 'styled-tools';
-// import { Row, Col } from 'react-grid-system';
 import Image from 'gatsby-image';
-import BackgroundImage from 'gatsby-background-image';
 import { useTeamAvatar } from '@hooks/use-team-avatar';
 
 const TeamMember = ({ name, title, bio, id, i }) => {

@@ -1,6 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
-import { theme } from 'styled-tools';
 import { Row, Col } from 'react-grid-system';
 import TeamMember from './team-member';
 
