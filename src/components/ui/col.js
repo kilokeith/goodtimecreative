@@ -3,8 +3,8 @@
  * See: https://sealninja.github.io/react-grid-system/
  */
 import styled from 'styled-components';
-import { Container as GridContainer } from 'react-grid-system';
+import { Col as GridCol } from 'react-grid-system';
 
-const Container = styled(GridContainer)``;
+const Col = styled(GridCol)``;
 
-export default Container;
+export default Col;
