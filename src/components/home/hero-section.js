@@ -19,7 +19,12 @@ const HeroSection = () => {
       <Container>
         <Row align="center" justify="center" nogutter nowrap>
           <CenteredCol xs={6} md={3}>
-            <StyledLogo />
+            <StyledLogo
+              data-sal="zoom-out"
+              data-sal-delay="300"
+              data-sal-duration="200"
+              data-sal-easing="ease"
+            />
           </CenteredCol>
         </Row>
       </Container>

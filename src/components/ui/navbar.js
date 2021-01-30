@@ -13,7 +13,12 @@ const Navbar = ({ fixed = true }) => {
         <Row justify="start">
           <Col md={2}>
             <AnchorLink to="/">
-              <Logo />
+              <Logo
+                data-sal="zoom-in"
+                data-sal-delay="300"
+                data-sal-duration="200"
+                data-sal-easing="ease"
+              />
             </AnchorLink>
           </Col>
           <Col md={10}>

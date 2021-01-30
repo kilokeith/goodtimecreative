@@ -6,13 +6,18 @@ import Image from 'gatsby-image';
 import BackgroundImage from 'gatsby-background-image';
 import { useTeamAvatar } from '@hooks/use-team-avatar';
 
-const TeamMember = ({ name, title, bio, id }) => {
+const TeamMember = ({ name, title, bio, id, i }) => {
   const avatars = useTeamAvatar(id);
   const img = avatars.image.node.childImageSharp.fluid;
   const imgHover = avatars.hover.node.childImageSharp.fluid;
 
   return (
-    <TeamProfile>
+    <TeamProfile
+      data-sal="zoom-out"
+      data-sal-delay={Math.round(i * 200) + 300}
+      data-sal-duration="300"
+      data-sal-easing="ease"
+    >
       <StyledAvatar>
         <StyledImage>
           <Image fluid={img} alt={name} />

@@ -32,10 +32,10 @@ const TeamList = () => {
   return (
     <Row justify="center">
       {teamBios &&
-        teamBios.map(member => {
+        teamBios.map((member, i) => {
           return (
             <Col xs={12} md={6} lg={4} key={`team-member-profile-${member.id}`}>
-              <TeamMember {...member} />
+              <TeamMember i={i} {...member} />
             </Col>
           );
         })}

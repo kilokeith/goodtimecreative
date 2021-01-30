@@ -64,17 +64,28 @@ const services = [
   },
 ];
 
-const Service = ({ title, capabilities }) => (
-  <CenteredCol xs={6} md={3} lg={2} key={`service-list-${title}`}>
-    <h3>{title}</h3>
-    <ul>
-      {capabilities &&
-        capabilities.map(capability => {
-          return <li key={`capabilities-list-${capability}`}>{capability}</li>;
-        })}
-    </ul>
-  </CenteredCol>
-);
+const Service = ({ title, capabilities, i }) => {
+  return (
+    <CenteredCol xs={6} md={3} lg={2} key={`service-list-${title}`}>
+      <div
+        data-sal="slide-down"
+        data-sal-delay={Math.round(200 * i) + 300}
+        data-sal-duration="300"
+        data-sal-easing="ease"
+      >
+        <h3>{title}</h3>
+        <ul>
+          {capabilities &&
+            capabilities.map(capability => {
+              return (
+                <li key={`capabilities-list-${capability}`}>{capability}</li>
+              );
+            })}
+        </ul>
+      </div>
+    </CenteredCol>
+  );
+};
 
 const ServicesSection = () => {
   const background = useBackground('pink-grit-bg.jpg');
@@ -93,11 +104,12 @@ const ServicesSection = () => {
         </Headline>
         <Row align="start" justify="center">
           {services &&
-            services.map(({ title, capabilities }) => (
+            services.map(({ title, capabilities }, index) => (
               <Service
                 title={title}
                 capabilities={capabilities}
                 key={`services-${title}`}
+                i={index}
               />
             ))}
         </Row>

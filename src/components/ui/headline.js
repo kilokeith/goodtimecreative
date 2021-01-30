@@ -5,7 +5,15 @@ import { switchProp, ifProp, prop } from 'styled-tools';
 import { colorStyle } from '@styles/mixins/colors';
 
 const Headline = ({ children, size, color, ...props }) => (
-  <StyledHTag as={size} color={color} {...props}>
+  <StyledHTag
+    as={size}
+    color={color}
+    {...props}
+    data-sal="slide-up"
+    data-sal-delay="500"
+    data-sal-duration="500"
+    data-sal-easing="ease"
+  >
     {children}
   </StyledHTag>
 );
