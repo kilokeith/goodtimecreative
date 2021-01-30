@@ -49,7 +49,12 @@ const Navbar = ({ fixed = true }) => {
 
       <Visible xs sm>
         <Row align="center" justify="end" nogutter>
-          <Col>
+          <Col xs={2}>
+            <AnchorLink to="/">
+              <Logo />
+            </AnchorLink>
+          </Col>
+          <Col xs={10}>
             <NavbarMobile />
           </Col>
         </Row>
