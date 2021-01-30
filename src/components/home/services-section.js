@@ -7,6 +7,7 @@ import Headline from '../ui/headline';
 
 import BackgroundImage from 'gatsby-background-image';
 import { useBackground } from '@hooks/use-background';
+import { ReactComponent as SolidLogo } from '@images/logos/good_time_solid.svg';
 
 const services = [
   {
@@ -84,6 +85,8 @@ const ServicesSection = () => {
       fluid={background.node.childImageSharp.fluid}
       id="services"
     >
+      <StyledLogo />
+
       <Container>
         <Headline size="h3" color={'black'} center>
           Let's Work Together
@@ -143,6 +146,19 @@ const StyledSection = styled(BackgroundImage)`
   background-color: ${theme('colors.red')};
   width: 100%;
   padding: 2rem;
+  position: relative;
+  overflow: hidden;
+`;
+
+const StyledLogo = styled(SolidLogo)`
+  position: absolute;
+  top: -5vw;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  color: ${theme('colors.pink')};
+  opacity: 0.3;
+  width: 100vw;
 `;
 
 export default ServicesSection;
