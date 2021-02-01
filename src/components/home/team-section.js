@@ -35,7 +35,7 @@ const TeamSection = () => {
             </Headline>
             <p>
               Good Time Creative is made up of a collection of creatives who
-              have specialized expertise in the event industry. We Thrive on
+              have specialized expertise in the event industry. We thrive on
               creativity and push the boundaries of experiential development.
               Our commitment to the excellence and dedication to our client's
               success is what keeps us up at night.
