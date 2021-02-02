@@ -43,7 +43,6 @@ const CenteredCol = styled(Col)`
 `;
 
 const StyledSection = styled(BackgroundImage)`
-  background-color: ${theme('colors.red')};
   width: 100%;
   padding: 2rem;
 `;
