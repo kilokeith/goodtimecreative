@@ -7,8 +7,8 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 module.exports = {
   siteMetadata: {
     title: `Good Time Creative`,
-    description: `Good Time Creative is a design and trade show agency from CEO Marissa Hohner.`,
-    keywords: ``,
+    description: `Good Time Creative is an experiential design and production agency specialized in custom and prefabricated trade show exhibits, experiential activations, and interior installations.`,
+    keywords: `Good Time Creative,trade show,exhibit buildout,booth graphic design,custom fabrication,activation concepts,display design`,
     author: `@kilokeith`,
     siteUrl: process.env.SITE_URL || 'https://goodtimecreative.com',
     contactEmail: 'info@goodtimecreative.com',
