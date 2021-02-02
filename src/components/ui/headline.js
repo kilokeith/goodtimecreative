@@ -4,19 +4,21 @@ import styled, { css } from 'styled-components';
 import { switchProp, ifProp, prop } from 'styled-tools';
 import { colorStyle } from '@styles/mixins/colors';
 
-const Headline = ({ children, size, color, ...props }) => (
-  <StyledHTag
-    as={size}
-    color={color}
-    {...props}
-    data-sal="slide-up"
-    data-sal-delay="500"
-    data-sal-duration="500"
-    data-sal-easing="ease"
-  >
-    {children}
-  </StyledHTag>
-);
+const Headline = ({ children, size, color, animate, ...props }) => {
+  const animateTags = animate
+    ? {
+        'data-sal': 'slide-up',
+        'data-sal-delay': '200',
+        'data-sal-duration': '500',
+        'data-sal-easing': 'ease',
+      }
+    : {};
+  return (
+    <StyledHTag as={size} color={color} {...animateTags} {...props}>
+      {children}
+    </StyledHTag>
+  );
+};
 
 const StyledHTag = styled.h1`
   ${colorStyle};
@@ -65,6 +67,7 @@ Headline.propTypes = {
   left: PropTypes.bool,
   center: PropTypes.bool,
   right: PropTypes.bool,
+  animate: PropTypes.bool,
 };
 
 Headline.defaultProps = {
@@ -73,6 +76,7 @@ Headline.defaultProps = {
   left: false,
   center: false,
   right: false,
+  animate: true,
 };
 
 export default Headline;
