@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from 'styled-tools';
 import Container from '../ui/container';
 import Row from '../ui/row';
 import Col from '../ui/col';
