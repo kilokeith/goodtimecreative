@@ -75,7 +75,7 @@ const CenteredCol = styled(Col)`
 
 const StyledSection = styled(BackgroundImage)`
   width: 100%;
-  min-height: 40rem;
+  height: 40rem;
 
   ${Container}, ${Row} {
     height: 100%;
