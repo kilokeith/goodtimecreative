@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { theme, prop } from 'styled-tools';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 import { ReactComponent as Instagram } from '@images/icons/instagram.svg';
 import { ReactComponent as Facebook } from '@images/icons/facebook.svg';
@@ -50,7 +51,7 @@ const SocialLink = ({ platform, size, color, ...props }) => {
   );
 };
 
-const StyledLink = styled.a`
+const StyledLink = styled(OutboundLink)`
   ${colorStyle};
   display: inline-block;
   font-size: ${prop('size')}px;
