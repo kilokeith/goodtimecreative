@@ -48,7 +48,7 @@ const NavbarMobile = () => {
             id="contact"
             className="menu-item"
             activeClassName="active"
-            to="/#footer"
+            to="/#contact"
           >
             Contact
           </MenuLink>

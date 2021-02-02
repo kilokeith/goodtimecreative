@@ -41,7 +41,7 @@ const Navbar = ({ fixed = true }) => {
                     </MenuLink>
                   </li>
                   <li>
-                    <MenuLink to="/#footer" activeClassName="active">
+                    <MenuLink to="/#contact" activeClassName="active">
                       Work with us
                     </MenuLink>
                   </li>
