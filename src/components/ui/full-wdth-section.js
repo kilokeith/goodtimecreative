@@ -17,4 +17,7 @@ FullWidthSection.propTypes = {
 
 FullWidthSection.defaultProps = {};
 
-export default FullWidthSection;
+export default styled(FullWidthSection)`
+  position: relative;
+  width: 100vw;
+`;

@@ -24,12 +24,24 @@ export const GlobalStyle = createGlobalStyle`
   .pink-grit-bg {
     background-image: url(${pinkGrit});
     background-color: ${colors.white};
-    background-repeat: repeat;
+    &,
+    &::before,
+    &::after {
+      background-repeat: repeat;
+      background-position: top center;
+      background-size: auto;
+    }
   }
 
   .black-grit-bg {
     background-image: url(${blackGrit});
     background-color: ${colors.black};
-    background-repeat: repeat;
+    &,
+    &::before,
+    &::after {
+      background-repeat: repeat;
+      background-position: top center;
+      background-size: auto;
+    }
   }
 `;

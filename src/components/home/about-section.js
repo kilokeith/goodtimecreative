@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { theme } from 'styled-tools';
 import { Hidden } from 'react-grid-system';
 
-import BackgroundImage from 'gatsby-background-image';
-import { useBackground } from '@hooks/use-background';
+import FullWidthSection from '../ui/full-wdth-section';
 import Container from '../ui/container';
 import Row from '../ui/row';
 import Col from '../ui/col';
@@ -12,14 +11,8 @@ import Headline from '../ui/headline';
 import { ReactComponent as OutlineLogo } from '@images/logos/good_time_outline.svg';
 
 const AboutSection = () => {
-  const background = useBackground('pink-grit-bg.jpg');
-
   return (
-    <StyledSection
-      Tag={'section'}
-      fluid={background.node.childImageSharp.fluid}
-      id="about"
-    >
+    <StyledSection id="about">
       <StyledLogo />
 
       <Container>
@@ -55,10 +48,19 @@ const CenteredCol = styled(Col)`
   }
 `;
 
-const StyledSection = styled(BackgroundImage)`
+const StyledSection = styled(FullWidthSection).attrs({
+  className: 'pink-grit-bg',
+})`
   position: relative;
   width: 100%;
   padding: 2rem;
+  &,
+  &::before,
+  &::after {
+    background-repeat: repeat;
+    background-position: top center;
+    background-size: auto;
+  }
 
   ${Container}, ${Row} {
     min-height: 50vh;

@@ -53,7 +53,7 @@ const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  padding: 4rem 2rem 4rem 2rem;
+  padding: 4rem 0rem 4rem 0rem;
   color: ${theme('colors.white')};
   p {
     white-space: pre-line;

@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { theme } from 'styled-tools';
 import { Row, Col } from 'react-grid-system';
 
-import BackgroundImage from 'gatsby-background-image';
-import { useBackground } from '@hooks/use-background';
+import FullWidthSection from '../ui/full-wdth-section';
 import Container from '../ui/container';
 import Headline from '../ui/headline';
 import TeamList from './team-list';
@@ -13,14 +12,8 @@ import { ReactComponent as RepeatLogo } from '@images/logos/good_time_repeat.svg
 import { ReactComponent as RoundLogo } from '@images/logos/gtc_full_round.svg';
 
 const TeamSection = () => {
-  const background = useBackground('pink-grit-bg.jpg');
-
   return (
-    <StyledSection
-      Tag={'section'}
-      fluid={background.node.childImageSharp.fluid}
-      id="team"
-    >
+    <StyledSection id="team">
       <StyledRoundLogo />
       <StyledRepeatLogo>
         <RepeatLogo />
@@ -57,11 +50,21 @@ const CenteredCol = styled(Col)`
   text-align: center;
 `;
 
-const StyledSection = styled(BackgroundImage)`
+const StyledSection = styled(FullWidthSection).attrs({
+  className: 'pink-grit-bg',
+})`
   position: relative;
   width: 100vw;
   min-height: 500px;
   padding: 2rem;
+
+  &,
+  &::before,
+  &::after {
+    background-repeat: repeat;
+    background-position: top center;
+    background-size: auto;
+  }
 `;
 
 const StyledRepeatLogo = styled.div`

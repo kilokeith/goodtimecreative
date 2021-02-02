@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { theme, prop } from 'styled-tools';
+import { theme } from 'styled-tools';
 import BackgroundImage from 'gatsby-background-image';
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { useBackground } from '@hooks/use-background';

@@ -45,6 +45,13 @@ const CenteredCol = styled(Col)`
 const StyledSection = styled(BackgroundImage)`
   width: 100%;
   padding: 2rem;
+  &,
+  &::before,
+  &::after {
+    background-repeat: repeat;
+    background-position: top center;
+    background-size: auto;
+  }
 `;
 
 export default HeroSection;

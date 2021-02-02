@@ -5,9 +5,8 @@ import { Row, Col } from 'react-grid-system';
 import Container from '../ui/container';
 import Headline from '../ui/headline';
 
-import BackgroundImage from 'gatsby-background-image';
-import { useBackground } from '@hooks/use-background';
 import { ReactComponent as SolidLogo } from '@images/logos/good_time_solid.svg';
+import FullWidthSection from '../ui/full-wdth-section';
 
 const services = [
   {
@@ -88,14 +87,8 @@ const Service = ({ title, capabilities, i }) => {
 };
 
 const ServicesSection = () => {
-  const background = useBackground('pink-grit-bg.jpg');
-
   return (
-    <StyledSection
-      Tag={'section'}
-      fluid={background.node.childImageSharp.fluid}
-      id="services"
-    >
+    <StyledSection id="services">
       <StyledLogo />
 
       <Container>
@@ -154,11 +147,21 @@ const CenteredCol = styled(Col)`
   }
 `;
 
-const StyledSection = styled(BackgroundImage)`
+const StyledSection = styled(FullWidthSection).attrs({
+  className: 'pink-grit-bg',
+})`
   width: 100%;
   padding: 2rem;
   position: relative;
   overflow: hidden;
+
+  &,
+  &::before,
+  &::after {
+    background-repeat: repeat;
+    background-position: top center;
+    background-size: auto;
+  }
 `;
 
 const StyledLogo = styled(SolidLogo)`
