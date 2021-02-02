@@ -7,6 +7,7 @@ import AboutSection from '../components/home/about-section';
 import ServicesSection from '../components/home/services-section';
 import TeamSection from '../components/home/team-section';
 import WorkSection from '../components/home/work-section';
+import ContactSection from '../components/home/contact-section';
 
 const IndexPage = () => (
   <Layout>
@@ -17,6 +18,7 @@ const IndexPage = () => (
     <WorkSection />
     <ServicesSection />
     <TeamSection />
+    <ContactSection />
   </Layout>
 );
 
