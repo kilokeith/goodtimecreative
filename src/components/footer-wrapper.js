@@ -23,6 +23,7 @@ const StyledWrapper = styled(FullWidthSection).attrs({
   overflow: hidden;
   background-color: ${theme('colors.black')};
   box-shadow: 0 50vh 0 50vh ${theme('colors.black')};
+  background-size: cover;
 `;
 
 const FooterSmile = styled.img`
