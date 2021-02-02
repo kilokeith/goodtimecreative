@@ -11,7 +11,7 @@ const TeamMember = ({ name, title, bio, id, i }) => {
   return (
     <TeamProfile
       data-sal="zoom-out"
-      data-sal-delay={Math.round(i * 200) + 300}
+      data-sal-delay={Math.round(200 * i) + 100}
       data-sal-duration="300"
       data-sal-easing="ease"
     >

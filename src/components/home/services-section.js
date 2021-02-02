@@ -69,7 +69,7 @@ const Service = ({ title, capabilities, i }) => {
     <CenteredCol xs={6} md={3} lg={2} key={`service-list-${title}`}>
       <div
         data-sal="slide-down"
-        data-sal-delay={Math.round(200 * i) + 300}
+        data-sal-delay={Math.round(200 * i) + 100}
         data-sal-duration="300"
         data-sal-easing="ease"
       >
