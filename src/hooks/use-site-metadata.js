@@ -12,6 +12,7 @@ export const useSiteMetadata = () => {
             siteUrl
             contactEmail
             contactAddress
+            deckUrl
             social {
               instagram
               facebook

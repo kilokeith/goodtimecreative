@@ -23,7 +23,7 @@ module.exports = {
       pinterest: 'https://www.pinterest.com/goodtimecreative_co/',
     },
     deckUrl:
-      'https://goodtimecreative.s3.amazonaws.com/uploads/gtc_capabillities_deck_2020-01-01.pdf',
+      'https://cdn.goodtimecreative.com/gtc_capabillities_deck_2020-01-01.pdf',
   },
   plugins: [
     {
