@@ -14,13 +14,11 @@ const Footer = () => {
   return (
     <StyledFooter>
       <Row justify="start">
-        <Col xs={12} sm={10} md={6}>
+        <Col xs={12} sm={10} md={5} lg={5}>
           <Headline size="h3" color={'white'}>
             Let's Work Together
           </Headline>
-
           <p>{contactAddress}</p>
-
           <SocialsRow>
             <li>
               <SocialLink platform="instagram" size={32} />
@@ -38,7 +36,6 @@ const Footer = () => {
               <SocialLink platform="pinterest" size={32} />
             </li>
           </SocialsRow>
-
           <p>
             <Obfuscate
               email={contactEmail}
@@ -47,10 +44,10 @@ const Footer = () => {
               }}
             />
           </p>
+          © {new Date().getFullYear()},{' '}
+          <a href={siteUrl}>Good Time Creative, LLC</a>
         </Col>
       </Row>
-      © {new Date().getFullYear()},{' '}
-      <a href={siteUrl}>Good Time Creative, LLC</a>
     </StyledFooter>
   );
 };
