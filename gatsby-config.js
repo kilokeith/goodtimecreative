@@ -9,7 +9,7 @@ module.exports = {
     title: `Good Time Creative`,
     description: `Good Time Creative is an experiential design and production agency specialized in custom and prefabricated trade show exhibits, experiential activations, and interior installations.`,
     keywords: `Good Time Creative,trade show,exhibit buildout,booth graphic design,custom fabrication,activation concepts,display design`,
-    author: `@kilokeith`,
+    author: `@goodtmcreative`,
     siteUrl: process.env.SITE_URL || 'https://goodtimecreative.com',
     contactEmail: 'info@goodtimecreative.com',
     contactAddress: `67 E Madison St. STE 1603A 1041\n
