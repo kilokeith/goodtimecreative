@@ -15,12 +15,13 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
 
   const metaDescription = description || siteMetadata.description;
   const defaultTitle = siteMetadata.title;
-  console.log(metaImage);
 
   const image =
     metaImage && metaImage.src
       ? `${siteMetadata.siteUrl}${metaImage.src}`
       : null;
+
+  const socialUrls = Object.values(siteMetadata.social).join('", "');
 
   return (
     <Helmet
@@ -96,8 +97,9 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
         {`
         {
           "@context": "https://schema.org",
-          "@type": "Organization",
-          "url": ${siteMetadata.siteUrl},
+          "@type": "Corporation",
+          "url": "${siteMetadata.siteUrl}",
+          "logo": "${image}",
           "name": "${siteMetadata.title}",
           "email": "${siteMetadata.contactEmail}",
           "telephone": "${siteMetadata.contactPhone}",
@@ -108,6 +110,7 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
             "addressRegion": "${siteMetadata.contactAddressObject.state}",
             "postalCode": "${siteMetadata.contactAddressObject.postalCode}"
           },
+          "sameAs": ["${socialUrls}"]
         }
       `}
       </script>
