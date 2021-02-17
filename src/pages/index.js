@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/ui/layout';
 import SEO from '../components/seo';
 
@@ -9,17 +10,33 @@ import TeamSection from '../components/home/team-section';
 import WorkSection from '../components/home/work-section';
 import ContactSection from '../components/home/contact-section';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
+const IndexPage = () => {
+  const { cardImage } = useStaticQuery(graphql`
+    query {
+      cardImage: file(relativePath: { eq: "logos/logo-full-large.jpg" }) {
+        childImageSharp {
+          resize(width: 1200) {
+            src
+            height
+            width
+          }
+        }
+      }
+    }
+  `);
 
-    <HeroSection />
-    <AboutSection />
-    <WorkSection />
-    <ServicesSection />
-    <TeamSection />
-    <ContactSection />
-  </Layout>
-);
+  return (
+    <Layout>
+      <SEO title="Home" image={cardImage?.childImageSharp?.resize} />
+
+      <HeroSection />
+      <AboutSection />
+      <WorkSection />
+      <ServicesSection />
+      <TeamSection />
+      <ContactSection />
+    </Layout>
+  );
+};
 
 export default IndexPage;
