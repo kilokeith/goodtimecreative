@@ -11,10 +11,18 @@ module.exports = {
     keywords: `Good Time Creative,trade show,exhibit buildout,booth graphic design,custom fabrication,activation concepts,display design`,
     author: `@goodtmcreative`,
     siteUrl: process.env.SITE_URL || 'https://goodtimecreative.com',
+    image: 'logos/logo-full-large.jpg',
     contactEmail: 'info@goodtimecreative.com',
     contactAddress: `67 E Madison St. STE 1603A 1041\n
       Chicago, IL 60603
     `,
+    contactAddressObject: {
+      street: '67 E Madison St. STE 1603A 1041',
+      city: 'Chicago',
+      state: 'IL',
+      postalCode: 60603,
+    },
+    contactPhone: '+1-773-340-2620',
     social: {
       instagram: 'https://www.instagram.com/goodtimecreativeco/',
       facebook: 'https://www.facebook.com/GoodTimeCreativeCo/',
