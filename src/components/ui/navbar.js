@@ -43,7 +43,7 @@ const Navbar = ({ fixed = true }) => {
                   </li>
                   <li>
                     <MenuLink
-                      href={'https://marissa9391.wixsite.com/blog'}
+                      href={'https://goodtimecreative.wixsite.com/blog'}
                       target="_blank"
                       as={OutboundLink}
                     >
