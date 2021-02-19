@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { Row, Col } from 'react-grid-system';
 import { slide as Menu } from 'react-burger-menu';
 import { rem } from 'polished';
@@ -51,6 +52,14 @@ const NavbarMobile = () => {
             to="/#contact"
           >
             Contact
+          </MenuLink>
+
+          <MenuLink
+            href={'https://marissa9391.wixsite.com/blog'}
+            target="_blank"
+            as={OutboundLink}
+          >
+            Blog
           </MenuLink>
         </Menu>
       </Col>

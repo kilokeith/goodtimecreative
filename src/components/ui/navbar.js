@@ -45,6 +45,15 @@ const Navbar = ({ fixed = true }) => {
                       Work with us
                     </MenuLink>
                   </li>
+                  <li>
+                    <MenuLink
+                      href={'https://marissa9391.wixsite.com/blog'}
+                      target="_blank"
+                      as={OutboundLink}
+                    >
+                      Blog
+                    </MenuLink>
+                  </li>
                 </MenuItems>
               </Col>
             </Row>
