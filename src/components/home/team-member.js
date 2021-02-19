@@ -9,13 +9,13 @@ const TeamMember = ({ name, title, bio, id, i }) => {
   const imgHover = avatars.hover.node.childImageSharp.fluid;
 
   return (
-    <TeamProfile
-      data-sal="zoom-out"
-      data-sal-delay={Math.round(200 * i) + 100}
-      data-sal-duration="300"
-      data-sal-easing="ease"
-    >
-      <StyledAvatar>
+    <TeamProfile>
+      <StyledAvatar
+        data-sal="zoom-out"
+        data-sal-delay={Math.round(200 * i) + 100}
+        data-sal-duration="300"
+        data-sal-easing="ease"
+      >
         <StyledImage>
           <Image fluid={img} alt={name} />
         </StyledImage>
