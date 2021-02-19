@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Row, Col, Visible, Hidden } from 'react-grid-system';
 import { theme, ifProp } from 'styled-tools';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import NavbarMobile from './navbar-mobile';
 import TextLogo from '../logos/text-logo';
 
@@ -13,12 +14,7 @@ const Navbar = ({ fixed = true }) => {
         <Row justify="start">
           <Col md={2}>
             <AnchorLink to="/">
-              <Logo
-                data-sal="zoom-in"
-                data-sal-delay="300"
-                data-sal-duration="200"
-                data-sal-easing="ease"
-              />
+              <Logo />
             </AnchorLink>
           </Col>
           <Col md={10}>
